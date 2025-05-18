@@ -1,0 +1,360 @@
+/* High-Contrast Minimalist Portfolio Theme */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --accent-color: #c5050c; /* Wisconsin red */
+    --dark: #0a0a0a;
+    --light: #ffffff;
+    --gray: #e0e0e0;
+    --transition: all 0.3s ease;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* System font stack */
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  
+  h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Layout */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--gray);
+  }
+  
+  /* Header & Navigation */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 2rem;
+  }
+  
+  nav ul li a {
+    color: var(--dark);
+    font-weight: 500;
+    position: relative;
+  }
+  
+  nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+  }
+  
+  nav ul li a:hover {
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover:after {
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 0;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light);
+    padding: 0.8rem 1.8rem;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: var(--transition);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.9s;
+  }
+  
+  .btn:hover {
+    background-color: #9c0309; /* Darker red on hover */
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  
+  /* About Section */
+  .about {
+    background-color: var(--light);
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .skills {
+    margin-top: 1rem;
+  }
+  
+  .skill-item {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .skill-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--gray);
+  }
+  
+  .skill-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: var(--skill-percent, 50%);
+    background-color: var(--accent-color);
+    z-index: 1;
+  }
+  
+  /* Projects Section */
+  .projects {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-card h3, .project-card p {
+    padding: 0 1.5rem;
+  }
+  
+  .project-card h3 {
+    margin-top: 1.5rem;
+  }
+  
+  .project-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  
+  .project-links a {
+    color: var(--light);
+    font-weight: 500;
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-color: var(--light);
+    text-align: center;
+  }
+  
+  .contact-info {
+    max-width: 600px;
+    margin: 2rem auto;
+    text-align: left;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+    
+    nav {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    nav ul {
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0.5rem;
+    }
+    
+    .hero {
+      text-align: center;
+    }
+  }
+  
+  /* For dark mode users */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --dark: #ffffff;
+      --light: #121212;
+      --gray: #333;
+    }
+  }
