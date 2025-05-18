@@ -3,92 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahit Reddy | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Sahit Reddy | Creative Developer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <div class="noise-overlay"></div>
+    
     <header>
-        <nav>
-            <div class="logo">Sahit Reddy</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+        <div class="logo">S/R</div>
+        <nav class="main-nav">
+            <div class="nav-toggle">
+                <div class="nav-toggle-bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#intro" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Hello, I'm Sahit Reddy</h1>
-            <p>Web Developer & Designer</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Write a brief introduction about yourself here.</p>
-                    <p>Talk about your interests, skills, and background.</p>
-                </div>
-                <div class="skills">
-                    <h3>My Skills</h3>
-                    <div class="skill-item">HTML & CSS <span>90%</span></div>
-                    <div class="skill-item">JavaScript <span>80%</span></div>
-                    <div class="skill-item">React <span>75%</span></div>
-                    <!-- Add more skills as needed -->
-                </div>
+    <main>
+        <section id="intro" class="intro-section">
+            <div class="glitch-container">
+                <h1 class="glitch" data-text="Sahit Reddy">Sahit Reddy</h1>
             </div>
-        </div>
-    </section>
+            <div class="split-text">
+                <span class="text-slice">Developer</span>
+                <span class="text-slice">Student</span>
+                <span class="text-slice">Creator</span>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="mouse-wheel"></div>
+                </div>
+                <p>Scroll to explore</p>
+            </div>
+        </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <img src="images/placeholder.jpg" alt="Project 1">
-                    <h3>Project Title</h3>
-                    <p>Project description goes here.</p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Live</a>
-                        <a href="#" target="_blank">Source Code</a>
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="reveal-text">About Me</h2>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-frame"></div>
+                    </div>
+                    
+                    <div class="about-text">
+                        <p class="paragraph-reveal">I'm a third-year student at UW-Madison with a passion for creative coding and innovative design solutions.</p>
+                        <p class="paragraph-reveal">My academic journey has equipped me with strong problem-solving skills and a solid foundation in computer science. I enjoy creating intuitive, efficient solutions and am constantly exploring new technologies.</p>
+                        <p class="paragraph-reveal">When I'm not coding, you might find me exploring the campus, participating in hackathons, or enjoying Madison's beautiful lakes.</p>
                     </div>
                 </div>
-                <!-- Add more projects as needed -->
+                
+                <div class="skills-container">
+                    <div class="skill-column">
+                        <h3 class="reveal-text">Design Skills</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="skill-tag">UI/UX</span></li>
+                            <li class="skill-item"><span class="skill-tag">Figma</span></li>
+                            <li class="skill-item"><span class="skill-tag">Adobe XD</span></li>
+                            <li class="skill-item"><span class="skill-tag">Illustration</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-column">
+                        <h3 class="reveal-text">Development</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="skill-tag">HTML/CSS</span></li>
+                            <li class="skill-item"><span class="skill-tag">JavaScript</span></li>
+                            <li class="skill-item"><span class="skill-tag">React</span></li>
+                            <li class="skill-item"><span class="skill-tag">Python</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-column">
+                        <h3 class="reveal-text">Tools</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item"><span class="skill-tag">Git</span></li>
+                            <li class="skill-item"><span class="skill-tag">Node.js</span></li>
+                            <li class="skill-item"><span class="skill-tag">VS Code</span></li>
+                            <li class="skill-item"><span class="skill-tag">AWS</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any questions or opportunities!</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>Email:</strong> your.email@example.com
+        <section id="work" class="work-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="reveal-text">Selected Work</h2>
                 </div>
-                <div class="contact-item">
-                    <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a>
+                
+                <div class="projects-marquee">
+                    <div class="marquee-track">
+                        <div class="marquee-content">
+                            <span>Projects</span>
+                            <span>•</span>
+                            <span>Experiments</span>
+                            <span>•</span>
+                            <span>Creations</span>
+                            <span>•</span>
+                        </div>
+                        <div class="marquee-content">
+                            <span>Projects</span>
+                            <span>•</span>
+                            <span>Experiments</span>
+                            <span>•</span>
+                            <span>Creations</span>
+                            <span>•</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <strong>GitHub:</strong> <a href="#" target="_blank">github.com/SahitReddy2</a>
+                
+                <div class="project-grid">
+                    <article class="project-card" data-index="1">
+                        <div class="project-image">
+                            <div class="project-hover">
+                                <div class="project-hover-content">
+                                    <h3>Project Title</h3>
+                                    <p>Brief description of the project with key technologies used.</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link">View Project</a>
+                                        <a href="#" class="project-link">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="project-title">Project 01</h4>
+                    </article>
+                    
+                    <article class="project-card" data-index="2">
+                        <div class="project-image">
+                            <div class="project-hover">
+                                <div class="project-hover-content">
+                                    <h3>Project Title</h3>
+                                    <p>Brief description of the project with key technologies used.</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link">View Project</a>
+                                        <a href="#" class="project-link">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="project-title">Project 02</h4>
+                    </article>
+                    
+                    <article class="project-card" data-index="3">
+                        <div class="project-image">
+                            <div class="project-hover">
+                                <div class="project-hover-content">
+                                    <h3>Project Title</h3>
+                                    <p>Brief description of the project with key technologies used.</p>
+                                    <div class="project-links">
+                                        <a href="#" class="project-link">View Project</a>
+                                        <a href="#" class="project-link">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="project-title">Project 03</h4>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="reveal-text">Let's Connect</h2>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <p class="paragraph-reveal">Have a project in mind or just want to chat? I'm always open to discussing new opportunities and ideas.</p>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="input-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Name</label>
+                                <div class="line"></div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Email</label>
+                                <div class="line"></div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <textarea id="message" required></textarea>
+                                <label for="message">Message</label>
+                                <div class="line"></div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <svg class="btn-arrow" viewBox="0 0 24 24">
+                                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-links">
+                        <a href="mailto:your.email@wisc.edu" class="contact-link">your.email@wisc.edu</a>
+                        <a href="https://github.com/SahitReddy2" target="_blank" class="contact-link">GitHub</a>
+                        <a href="#" target="_blank" class="contact-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Sahit Reddy. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>© 2025 Sahit Reddy. Built with creativity.</p>
+            </div>
+            <div class="back-to-top">
+                <a href="#intro">Back to top</a>
+            </div>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
